@@ -1,0 +1,308 @@
+/* Main Styles --------------------- */
+*{
+   margin: 0px;
+   padding: 0px;
+   box-sizing: border-box;
+   font-family: 'Lato', sans-serif;
+
+ }
+
+html,
+body {
+  /*width: 100%;*/
+  margin: 0;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  background: url('img/background_color.jpg') no-repeat center;
+  background-size: cover;
+}
+
+.main-header {
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  padding-top: 20vh;
+  height: 100vh;
+  color: rgba(255, 255, 255, 1);
+  position: relative;
+  z-index: 7;
+}
+
+.RWRC {
+  font-size: 48px;
+  text-shadow: 1px 3px 10px #085a94;
+}
+
+.title {
+  font-size: 34px;
+  text-shadow: 1px 3px 5px #085a94;
+
+}
+
+.mission {
+  color: black;
+  font-size: 18px;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 30px;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  border: 3px solid black;
+
+}
+
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 10vh;
+    width: 100vw;
+    background-color: #085a94;
+    font-family: 'Lato', sans-serif;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    border-bottom: 3px solid white;
+    border-top: 3px solid white;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #085a94;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 10px 10px;
+  text-align: left;
+  height: 80px;
+  justify-content: space-around;
+  flex-direction: column;
+  z-index: 2;
+
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+
+
+.logo img {
+
+   height: 7.5vh;
+   transition: 1s ease-in-out;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+.logoimg:hover .bruh2 {
+
+  fill: #edc6ff;
+  transition: .25s ease-in-out;
+}
+
+
+.nav-links{
+  display: flex;
+  justify-content: space-around;
+  width: 85%;
+
+
+
+
+}
+
+.nav-links li{
+  list-style: none;
+
+
+}
+
+.nav-links a{
+  color: rgb(225, 225, 225);
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 14px;
+  display: inline-block;
+  padding: 3px 20px 4px 20px;
+
+
+}
+
+.nav-links a:hover {
+  background-color: white;
+  color: #3e578a;
+  transition: .45s;
+}
+
+.nav-links a:active {
+  background-color: #1fe6ff;
+  transition: 0s;
+}
+
+
+
+
+
+
+
+
+
+
+
+.burger {
+  display: none;
+  cursor: pointer;
+  transition: all 0.5s ease;
+
+}
+
+
+
+.burger div{
+  width: 25px;
+  height: 3px;
+  background-color: rgb(255, 255, 255);
+  margin: 5px;
+  transition: all 0.5s ease;
+
+}
+
+.burger:hover {
+  background-color: white;
+}
+.burger:hover div{
+  background-color: #085a94;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------Media Queries ----------------------*/
+
+
+@media screen and (min-width: 768px){
+  .logo {
+    margin-left: 5%;
+  }
+
+
+
+
+
+}
+
+
+@media screen and (min-width: 1200px){
+    .mission{
+      width: 30%;
+    }
+}
+
+
+@media screen and (max-width: 1080px){
+
+.nav-links a {
+  font-size: 12px;
+}
+
+
+
+
+
+
+@media screen and (max-width: 1024px){
+  .nav-links{
+      width: 90%;
+
+  }
+
+
+
+}
+
+
+
+@media screen and (max-width: 768px){
+  body{
+    overflow-y: hidden;
+  }
+  .nav-links{
+    position: absolute;
+    right: 0px;
+    height: 30vh;
+    top: 9vh;
+    background-color: #085a94;
+    opacity: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transform: translateY(-150%);
+    transition: transform 0.5s ease-in;
+
+}
+
+.nav-links a{
+  padding: 3px 60px 4px 60px;
+}
+
+
+
+  .burger{
+    display: block;
+    margin-right: 10%;
+  }
+
+
+
+  .logo {
+    margin-left: 7%;
+  }
+
+  .mission {
+    width: 85%;
+  }
+
+}
+
+  @media screen and (max-width: 550px) {
+
+    }
+
+  @media screen and (max-width: 400px) {
+          .title {
+            font-size: 18px;
+      }
+    }
+
+
+
+.nav-active{
+      transform: translateY(0%);
+      transition: transform 0.5s ease-in;
+    }
+
+
+
+.toggle .line1{
+  transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+  opacity: 0;
+}
+.toggle .line3{
+  transform: rotate(45deg) translate(-5px,-6px);
+}
