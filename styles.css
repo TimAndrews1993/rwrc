@@ -7,24 +7,27 @@
 
  }
 
-html,
+
 body {
   /*width: 100%;*/
   margin: 0;
   scroll-behavior: smooth;
-  overflow-x: hidden;
+
+
   background: url('img/background_color.jpg') no-repeat center;
   background-size: cover;
+  min-height: 100vh;
+
 }
 
-.main-header {
+header {
   font-family: 'Lato', sans-serif;
   text-align: center;
   padding-top: 20vh;
-  height: 100vh;
   color: rgba(255, 255, 255, 1);
   position: relative;
   z-index: 7;
+  margin: 0 auto;
 }
 
 .RWRC {
@@ -35,21 +38,89 @@ body {
 .title {
   font-size: 34px;
   text-shadow: 1px 3px 5px #085a94;
-
 }
 
-.mission {
-  color: black;
-  font-size: 18px;
+.mainContent{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+.section0{
+  color: #085a94;
+  font-size: 16px;
   width: 50%;
+  text-align: center;
+  margin-top: 10px;
+  background: rgba(255, 255, 255, 0.96);
+  padding: 20px;
+  border-top: 12px solid #085a94;
   margin: 0 auto;
+  margin-bottom: 30px;
+  border-radius: 20px;
+}
+.section1{
+  color: #085a94;
+  font-size: 16px;
+  width: 70%;
   text-align: center;
   margin-top: 30px;
-  background: rgba(255, 255, 255, 0.7);
-  padding: 10px;
-  border: 3px solid black;
+  background: rgba(255, 255, 255, 0.96);
+  padding: 50px;
+  border-top: 7px solid #085a94;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  }
 
+.section2{
+  color: #085a94;
+  font-size: 16px;
+  width: 70%;
+  text-align: center;
+  margin-top: 30px;
+  background: rgba(255, 255, 255, 0.96);
+  padding: 50px;
+  border-top: 7px solid #085a94;
+  margin: 0 auto;
+  height: 50%;
+  border-radius: 20px;
 }
+
+.teamMember{
+  text-align: center;
+  background: rgba(255, 255, 255, 0.96);
+  padding: 10px;
+  border-top: 7px solid #085a94;
+  border-radius: 20px;
+  width: 30%;
+  font-size: 14px;
+  line-height: .75;
+  color: #085a94;
+  margin: 10px;
+  transition: .35s;
+}
+.teamMember:hover{
+  transform: scale(1.05);
+}
+.member{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 75%;
+}
+
+.section1 li {
+  list-style: none;
+  text-align: left;
+  line-height: 2;
+}
+
+.lotus{
+  height: 1em;
+  padding-right: 20px;
+}
+
+
 
 
 
@@ -65,17 +136,18 @@ nav{
     top: 0;
     z-index: 100;
     border-bottom: 3px solid white;
-    border-top: 3px solid white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.42);
+
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #085a94;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.32);
   padding: 10px 10px;
   text-align: left;
-  height: 80px;
+  height:
   justify-content: space-around;
   flex-direction: column;
   z-index: 2;
@@ -84,6 +156,11 @@ nav{
 
 .dropdown:hover .dropdown-content {
   display: flex;
+}
+
+.dropdown-content li {
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 
@@ -143,8 +220,12 @@ nav{
   transition: 0s;
 }
 
-
-
+.ul {
+  list-style-type: circle;
+}
+.benefits {
+  list-style:
+}
 
 
 
@@ -206,7 +287,16 @@ nav{
 
 
 @media screen and (min-width: 1200px){
-    .mission{
+    .section1{
+      width: 60%;
+    }
+    .section2{
+      width: 25%;
+    }
+    .teamMember{
+      width: 20%;
+    }
+    .section0{
       width: 30%;
     }
 }
@@ -236,9 +326,7 @@ nav{
 
 
 @media screen and (max-width: 768px){
-  body{
-    overflow-y: hidden;
-  }
+
   .nav-links{
     position: absolute;
     right: 0px;
@@ -252,7 +340,9 @@ nav{
     width: 100%;
     transform: translateY(-150%);
     transition: transform 0.5s ease-in;
-
+}
+.section0{
+  width: 80%;
 }
 
 .nav-links a{
@@ -272,8 +362,12 @@ nav{
     margin-left: 7%;
   }
 
-  .mission {
-    width: 85%;
+  .section1 {
+    width: 95%;
+  }
+
+  .teamMember{
+    width: 45%;
   }
 
 }
